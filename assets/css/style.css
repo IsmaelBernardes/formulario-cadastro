@@ -99,7 +99,7 @@
     width: 100%;
 }
 
-.button-cadastrar:focus{
+.button-cadastrar.ativo{
     background-color: #00c8b3;
     color: #ffffff;
 }
