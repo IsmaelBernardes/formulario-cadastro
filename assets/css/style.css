@@ -1,0 +1,109 @@
+*{
+    border: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.app{
+    background-color: #fcfcfc;
+    font-style: sans-serif;
+    height: 100vh;
+} 
+
+.titulo-principal{
+    color: #555555;
+    margin: 2rem 0 0 0;
+    text-align: center;
+}
+
+.container{
+    height: 100%;
+    margin: 0 auto;
+    max-width: 768px;
+    padding: 1rem;
+}
+
+.form-cadastro__inputs{
+    height: 60px;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.form-cadastro__inputs__label{
+    border-bottom: 1px solid #efeeed;
+    bottom: -1px;
+    color: #8f8e8e;
+    font-size: 1.3rem;
+    height: 100%;
+    left: 0px;
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+}
+
+.form-cadastro__inputs__label::after{
+    border-bottom: 2px solid #efeeed;
+    bottom: 0px;
+    content: "";
+    height: 100%;
+    left: 0px;
+    position: absolute;
+    width: 100%;
+}
+
+.label-nome{
+    bottom: 5px;
+    left: 0px;
+    position: absolute; 
+    transition: all 0.3s ease;
+}
+
+.form-cadastro__inputs__dados{
+    background-color: #fcfcfc;
+    border: none;
+    font-size: 1.3rem;
+    height: 100%;
+    outline: none;
+    padding-top: 2rem;
+    width: 100%;
+}
+
+.form-cadastro__inputs__dados:focus + .form-cadastro__inputs__label .label-nome,
+.form-cadastro__inputs__dados:valid + .form-cadastro__inputs__label .label-nome{
+    font-size: 1.1rem;
+    transform: translateY(-150%);
+}
+
+.message-error{ 
+    color: #eb4a46;
+    visibility: hidden;
+}
+
+.form-cadastro__inputs__label.error{
+    border-color: #eb4a46;
+}
+
+.form-cadastro__inputs__label.error + .message-error{
+    visibility: visible;
+}
+
+.button-cadastrar{
+    background-color: #f6f6f6;
+    border-radius: 70px;
+    color: #dddcdc;
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-top: 2rem;
+    padding: 2rem;
+    width: 100%;
+}
+
+.button-cadastrar:focus{
+    background-color: #00c8b3;
+    color: #ffffff;
+}
+
+.button-cadastrar:hover{
+    opacity: 70%;
+}

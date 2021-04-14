@@ -5,16 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+
 </head>
 <body class="app">
     
-    <form class="formulario-cadastro">
-        <input class="formulario-cadastro__inputs" type="text" name="nome" id="nome">
-        <input class="formulario-cadastro__inputs" type="email" name="email" id="email">
-        <input class="formulario-cadastro__inputs" type="number" name="cpf" id="cpf">
-        <input class="formulario-cadastro__inputs" type="tel" name="telefone" id="telefone">
+    <h1 class="titulo-principal">Formulário de Cadastro</h1>
 
-        <button class="button-cadastrar" type="submit">Cadastrar</button>
-    </form>
+    <div class="container">
+        <form class="form-cadastro" onsubmit="ColetarDadosForm(event)">
+            <fieldset class="form-cadastro__inputs">
+                <input class="form-cadastro__inputs__dados" data-input-nome type="text" name="nome" id="nome" autocomplete="off" >
+                <label class="form-cadastro__inputs__label"  for="nome">
+                    <span class="label-nome">Nome completo (sem abreviações)</span>
+                </label>
+                <span class="message-error">Nome deve conter no mínimo 3 dígitos!</span>
+            </fieldset>
+            
+            <fieldset class="form-cadastro__inputs">
+                <input class="form-cadastro__inputs__dados" data-input-email type="email" name="email" id="email" autocomplete="off" >
+                <label class="form-cadastro__inputs__label" for="email">
+                    <span class="label-nome">E-mail</span>
+                </label>
+                <span class="message-error">e-mail deve conter o caractere '@' e um domínio! ex:'@email.com'</span>
+            </fieldset>
+
+            <fieldset class="form-cadastro__inputs">
+                <input class="form-cadastro__inputs__dados" data-input-cpf type="cpf" name="cpf" id="cpf" autocomplete="off" >
+                <label class="form-cadastro__inputs__label" for="cpf">
+                    <span class="label-nome">CPF</span>
+                </label>
+                <span class="message-error">CPF deve conter 11 dígitos e estar no formato 000.000.000-00</span>
+            </fieldset>
+            
+            <fieldset class="form-cadastro__inputs">
+                <input class="form-cadastro__inputs__dados" data-input-telefone type="telefone" name="telefone" id="telefone" autocomplete="off" >
+                <label class="form-cadastro__inputs__label" for="telefone">
+                    <span class="label-nome">Telefone</span>
+                </label>
+                <span class="message-error">Telefone deve estar no formato (DD) 00000-0000</span>
+            </fieldset>
+            
+            <button class="button-cadastrar" type="submit">Cadastrar</button>
+        </form>
+    </div>
+
+    <script src="./assets/js/index.js"></script>
 </body>
-</html>
+</html> 
