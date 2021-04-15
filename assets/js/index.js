@@ -1,40 +1,28 @@
-import { validarNome, validarEmail, validarCpf, validarTelefone } from "./components/validacoesDeCampos.js"
-import { enviarDados } from "./components/envioDeDados.js";
+import { enviarDados } from "./components/model/envioDeDados.js";
+import { validacaoDeCampos } from "./components/model/validacaoDeCampos.js"
+import { dadosIniciais } from "./components/model/httpRequest.js"
+import { carregarTabela } from "./components/view/criarTabela.js";
 
-const formulario = window.document.querySelector("[data-form-cadastro]");
-const inputNome = window.document.querySelector("[data-input-nome]");
-const inputEmail = window.document.querySelector("[data-input-email]");
-const inputCpf = window.document.querySelector("[data-input-cpf]");
-const inputTelefone = window.document.querySelector("[data-input-telefone]");
-const buttonCadastrar = window.document.querySelector("[data-button-cadastrar]");
-
-const inputs = [inputNome, inputEmail, inputCpf, inputTelefone];
-
-const funcValidacoes = {
-    nome: validarNome,
-    email: validarEmail,
-    cpf: validarCpf,
-    telefone: validarTelefone
+function enviarDadosIniciais(dados){
+    localStorage.setItem("listaDeCadastros", JSON.stringify([...dados]));
 }
 
-const dados = {}
+dadosIniciais(enviarDadosIniciais);
 
-inputs.forEach(campos =>{
+let { dados, validos } = validacaoDeCampos();
 
-    campos.addEventListener("change", event =>{
-    
-        let valido = false;
-        event.preventDefault();
-        valido = funcValidacoes[campos.name](event.target);
-
-        if(valido){
-            dados[campos.name] = event.target.value;
-        }
-    })
-})
-
-formulario.addEventListener("submit", (event) =>{
+window.document.querySelector("[data-form-cadastro]").addEventListener("submit", (event) =>{
 
     event.preventDefault();
-    enviarDados(dados);
+    
+    const paginaTabela = window.document.querySelector("[data-link-visualizacao]");
+    paginaTabela.click();
+    
+    if(validos.indexOf(false) === -1){
+        enviarDados(dados);
+    }
+
+    validos = [];
 })
+
+carregarTabela()

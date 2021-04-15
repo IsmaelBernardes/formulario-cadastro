@@ -19,9 +19,9 @@
 
 .container{
     height: 100%;
-    margin: 0 auto;
+    margin: 1.5rem auto 0;
     max-width: 768px;
-    padding: 1rem;
+    padding: 0 1rem;
 }
 
 .form-cadastro__inputs{
@@ -91,7 +91,6 @@
 .button-cadastrar{
     background-color: #f6f6f6;
     border-radius: 70px;
-    color: #dddcdc;
     font-size: 1.6rem;
     font-weight: 500;
     margin-top: 2rem;
@@ -99,11 +98,50 @@
     width: 100%;
 }
 
-.button-cadastrar.ativo{
+.button-cadastrar:focus{
     background-color: #00c8b3;
     color: #ffffff;
 }
 
 .button-cadastrar:hover{
     opacity: 70%;
+}
+
+.button-cadastrar{
+    color: #dddcdc;
+}
+
+.container.table{
+    margin: 3rem auto 0;
+    max-width: 1024px;
+}
+
+.table-cadastro{
+    background-color: #000;
+    width: 100%;
+}
+
+.table-cadastro__thead td{
+    background-color: #00c8b3;
+}
+
+.table-cadastro__thead td, .table-cadastro__tbody tr td{
+    font-size: 1.1rem;
+    padding: 1rem 1.5rem;
+    text-align: center;
+}
+
+.table-cadastro__tbody tr td{
+    background-color: #fefefe;
+    color: #555555;
+}
+
+.button-retornar{
+    background-color: #00c8b3;
+    border-radius: 50px;
+    color: #ffffff;
+    font-size: 1rem;
+    margin: 2rem 70%;
+    padding: 1rem;
+    width: 30%;
 }

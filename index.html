@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulário De Cadastro</title>
     <link rel="stylesheet" href="./assets/css/style.css">
 
 </head>
@@ -15,8 +15,8 @@
     <div class="container">
         <form class="form-cadastro" data-form-cadastro>
             <fieldset class="form-cadastro__inputs">
-                <input class="form-cadastro__inputs__dados" data-input-nome type="text" name="nome" id="nome" autocomplete="off" required>
-                <label class="form-cadastro__inputs__label" data-inputs-label for="nome">
+                <input class="form-cadastro__inputs__dados" data-input-nome type="text" name="name" id="name" autocomplete="off" required>
+                <label class="form-cadastro__inputs__label" data-inputs-label for="name">
                     <span class="label-nome">Nome completo (sem abreviações)</span>
                 </label>
                 <span class="message-error" data-message-error>Message Error!</span>
@@ -39,14 +39,15 @@
             </fieldset>
             
             <fieldset class="form-cadastro__inputs">
-                <input class="form-cadastro__inputs__dados" data-input-telefone type="telefone" name="telefone" id="telefone" autocomplete="off" required>
-                <label class="form-cadastro__inputs__label" data-inputs-label for="telefone">
+                <input class="form-cadastro__inputs__dados" data-input-telefone type="phone" name="phone" id="phone" autocomplete="off" required>
+                <label class="form-cadastro__inputs__label" data-inputs-label for="phone">
                     <span class="label-nome">Telefone</span>
                 </label>
                 <span class="message-error" data-message-error>Message Error!</span>
             </fieldset>
             
-            <button class="button-cadastrar" data-button-cadastrar type="submit">Cadastrar</button>
+            <a href="./visualizacaoDeDados.html" data-link-visualizacao></a>
+            <button class="button-cadastrar" data-button-cadastrar>Cadastrar</button>
         </form>
     </div>
 

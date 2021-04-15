@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizar Cadastrados</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+</head>
+<body class="app">
+
+    <h1 class="titulo-principal">Visualização De Dados</h1>
+
+    <div class="container table">
+        <table class="table-cadastro">
+            <thead class="table-cadastro__thead" data-table-thead>
+                <td>Nome</td>
+                <td>E-mail</td>
+                <td>CPF</td>
+                <td>Telefone</td>
+            </thead>
+            <tbody class="table-cadastro__tbody" data-table-tbody>
+            </tbody>
+        </table>
+
+        <a href="./index.html" data-link-index></a>
+        <button class="button-retornar" data-button-retornar>Voltar para o formulário</button>
+    </div>
+    
+    <script type="module">
+        import { carregarTabela } from "./assets/js/components/view/criarTabela.js"
+
+        carregarTabela();
+    </script>
+
+</body>
+</html>
