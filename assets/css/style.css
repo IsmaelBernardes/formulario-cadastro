@@ -88,6 +88,14 @@
     visibility: visible;
 }
 
+.link-visualizacao{
+    color: #555;
+}
+
+button{
+    cursor: pointer;
+}
+
 .button-cadastrar{
     background-color: #f6f6f6;
     border-radius: 70px;
@@ -111,13 +119,17 @@
     color: #dddcdc;
 }
 
+/* TABELA DE VISUALIZAÇÃO DOS CADASTROS */
+
 .container.table{
     margin: 3rem auto 0;
     max-width: 1024px;
+    padding: 0 10px;
 }
 
 .table-cadastro{
-    background-color: #000;
+    background-color: #555;
+    position: relative;
     width: 100%;
 }
 
@@ -125,9 +137,17 @@
     background-color: #00c8b3;
 }
 
+.table-cadastro__tbody tr{
+    opacity: 90%;
+}
+
+.table-cadastro__tbody tr:hover{
+    opacity: 100%;
+}
+
 .table-cadastro__thead td, .table-cadastro__tbody tr td{
     font-size: 1.1rem;
-    padding: 1rem 1.5rem;
+    padding: 1rem 1.1rem;
     text-align: center;
 }
 
@@ -136,12 +156,30 @@
     color: #555555;
 }
 
+.delete{
+    background-image: url("../img/delete-24px.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    height: 30px;
+    margin: 10px 0;
+    position: absolute;
+    right: 1rem;
+    visibility: hidden;
+    width: 30px;
+}
+
+.table-cadastro__tbody tr:hover .delete{
+    visibility: visible;
+}
+
 .button-retornar{
     background-color: #00c8b3;
     border-radius: 50px;
     color: #ffffff;
     font-size: 1rem;
-    margin: 2rem 70%;
+    margin: 2rem 0 2rem 70%;
     padding: 1rem;
     width: 30%;
 }

@@ -11,10 +11,10 @@ export function validacaoDeCampos(){
     const inputs = [inputNome, inputEmail, inputCpf, inputTelefone];
 
     const funcValidacoes = {
-        name: validarNome,
+        nome: validarNome,
         email: validarEmail,
         cpf: validarCpf,
-        phone: validarTelefone
+        telefone: validarTelefone
     }
 
     const dados = {}

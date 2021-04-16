@@ -9,14 +9,14 @@
 
 </head>
 <body class="app">
-    
+
     <h1 class="titulo-principal">Formulário de Cadastro</h1>
 
     <div class="container">
         <form class="form-cadastro" data-form-cadastro>
             <fieldset class="form-cadastro__inputs">
-                <input class="form-cadastro__inputs__dados" data-input-nome type="text" name="name" id="name" autocomplete="off" required>
-                <label class="form-cadastro__inputs__label" data-inputs-label for="name">
+                <input class="form-cadastro__inputs__dados" data-input-nome type="text" name="nome" id="nome" autocomplete="off" required>
+                <label class="form-cadastro__inputs__label" data-inputs-label for="nome">
                     <span class="label-nome">Nome completo (sem abreviações)</span>
                 </label>
                 <span class="message-error" data-message-error>Message Error!</span>
@@ -39,14 +39,14 @@
             </fieldset>
             
             <fieldset class="form-cadastro__inputs">
-                <input class="form-cadastro__inputs__dados" data-input-telefone type="phone" name="phone" id="phone" autocomplete="off" required>
-                <label class="form-cadastro__inputs__label" data-inputs-label for="phone">
+                <input class="form-cadastro__inputs__dados" data-input-telefone type="telefone" name="telefone" id="telefone" autocomplete="off" required>
+                <label class="form-cadastro__inputs__label" data-inputs-label for="telefone">
                     <span class="label-nome">Telefone</span>
                 </label>
                 <span class="message-error" data-message-error>Message Error!</span>
             </fieldset>
             
-            <a href="./visualizacaoDeDados.html" data-link-visualizacao></a>
+            <a class="link-visualizacao" href="./visualizacaoDeDados.html" data-link-visualizacao>Visualizar Tabela De Cadastros</a>
             <button class="button-cadastrar" data-button-cadastrar>Cadastrar</button>
         </form>
     </div>

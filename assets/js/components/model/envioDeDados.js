@@ -1,11 +1,11 @@
-import { carregarTabela } from "../view//criarTabela.js"
+import { carregarTabela } from "../view/carregarTabela.js";
 
-export function enviarDados(dados){
+export function handlerCadastros(dados){
 
     const listaDeCadastros = JSON.parse(localStorage.getItem("listaDeCadastros")) || [];
 
     const listaAtualizada = [...listaDeCadastros, dados];
-
+ 
     localStorage.setItem("listaDeCadastros", JSON.stringify(listaAtualizada));
 
     carregarTabela();

@@ -1,23 +1,19 @@
+import { carregarTabela } from "../view/carregarTabela.js"
+import { BotaoDeletar } from "../view/deletarCadastro.js"
 
-export function carregarTabela(){
+export function renderTabelaDados(cadastro, id){
 
-    const listaDeCadastros = JSON.parse(localStorage.getItem("listaDeCadastros")) || [];
     const tbody = window.document.querySelector("[data-table-tbody]");
-    const buttonRetornar = window.document.querySelector("[data-button-retornar]");
-    const paginaIndex = window.document.querySelector("[data-link-index]");
+    const tr = window.document.createElement("tr");
 
-    listaDeCadastros.forEach(cadastros => {
-        const tr = window.document.createElement("tr");
+    for(let dados in cadastro){
+        const tdBody = window.document.createElement("td");
 
-        for(let dados in cadastros){
-            const td = window.document.createElement("td");
+        tdBody.innerHTML = cadastro[dados]
+        tr.appendChild(tdBody);
+    }
 
-            td.innerHTML = cadastros[dados]
-            tr.appendChild(td);
-        }
+    tr.appendChild(BotaoDeletar(carregarTabela, id));
+    tbody.appendChild(tr);
 
-        tbody.appendChild(tr);
-    });
-
-    buttonRetornar.addEventListener("click", () => paginaIndex.click())
 }
