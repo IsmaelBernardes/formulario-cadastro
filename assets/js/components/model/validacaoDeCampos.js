@@ -1,3 +1,4 @@
+import { setError, setSucess } from "../view/tratamentoDeErros.js"
 import { validarNome, validarEmail, validarCpf, validarTelefone } from "./regrasDeValidacaoDeCampos.js"
 
 export function validacaoDeCampos(){
@@ -9,6 +10,24 @@ export function validacaoDeCampos(){
     const buttonCadastrar = window.document.querySelector("[data-button-cadastrar]");
 
     const inputs = [inputNome, inputEmail, inputCpf, inputTelefone];
+    const cadastro = {}
+
+    inputs.forEach(campos =>{
+
+        campos.addEventListener("change", event =>{
+
+            event.preventDefault();
+            const dado = validar(event.target);
+
+            cadastro[campos.name] = dado;
+
+        })
+    })
+
+    return cadastro;
+}
+
+function validar(campo){
 
     const funcValidacoes = {
         nome: validarNome,
@@ -17,24 +36,15 @@ export function validacaoDeCampos(){
         telefone: validarTelefone
     }
 
-    const dados = {}
-    let validos = [];
+    const {regra, mensagemErro} = funcValidacoes[campo.name](campo);
 
-    inputs.forEach(campos =>{
+    if(regra === false){
 
-        campos.addEventListener("change", event =>{
+        setError(campo, mensagemErro);
+        return null;
+    }else{
 
-            event.preventDefault();
-            const valido = funcValidacoes[campos.name](event.target);
-
-            if(valido){
-
-                dados[campos.name] = event.target.value;
-            }        
-
-            validos.push(valido);
-        })
-    })
-
-    return { dados, validos };
+        setSucess(campo);
+        return campo.value;
+    }
 }

@@ -3,8 +3,6 @@ export function salvarDadosHttp(cadastros){
 
     const listaDeCadastros = JSON.parse(localStorage.getItem("listaDeCadastros")) || [];
     let dadosIniciaisFormatados = [];
-
-    console.log(listaDeCadastros);
     
     cadastros.forEach(dados => dadosIniciaisFormatados.push(formatarDadosIniciais(dados)));
 

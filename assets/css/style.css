@@ -26,7 +26,7 @@
 
 .form-cadastro__inputs{
     height: 60px;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
     position: relative;
 }
 
@@ -99,6 +99,7 @@ button{
 .button-cadastrar{
     background-color: #f6f6f6;
     border-radius: 70px;
+    color: #dddcdc;
     font-size: 1.6rem;
     font-weight: 500;
     margin-top: 2rem;
@@ -113,10 +114,6 @@ button{
 
 .button-cadastrar:hover{
     opacity: 70%;
-}
-
-.button-cadastrar{
-    color: #dddcdc;
 }
 
 /* TABELA DE VISUALIZAÇÃO DOS CADASTROS */
