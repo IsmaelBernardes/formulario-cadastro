@@ -1,9 +1,9 @@
 
-function setError(campo, mensagemErro ){
+function setError(campo, mensagemErro){
 
     const { elementoMensagem, elementoDeError } = encontrarElementosDeRenderizarErro(campo);
 
-    elementoMensagem.innerText = mensagemErro ;
+    elementoMensagem.innerHTML = mensagemErro ;
     elementoDeError.className = "form-cadastro__inputs__label error"
 }
 
@@ -11,7 +11,7 @@ function setSucess(campo){
 
     const { elementoMensagem, elementoDeError } = encontrarElementosDeRenderizarErro(campo);
     
-    elementoDeError.className = "form-cadastro__inputs__label"
+    elementoDeError.className = "form-cadastro__inputs__label";
 }
 
 function encontrarElementosDeRenderizarErro(elemento){

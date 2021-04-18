@@ -102,8 +102,9 @@ button{
     color: #dddcdc;
     font-size: 1.6rem;
     font-weight: 500;
+    height: 100px;
     margin-top: 2rem;
-    padding: 2rem;
+    padding: 1rem;
     width: 100%;
 }
 
@@ -114,6 +115,23 @@ button{
 
 .button-cadastrar:hover{
     opacity: 70%;
+}
+
+.spinner{
+    animation: spin 1s linear infinite;
+    border: 4px solid #00c8b3;
+    border-bottom-color: #ffffff;
+    border-left-color: #ffffff;
+    border-radius: 50%;
+    color: #00000000;
+    content: none;
+    height: 50px;
+    margin: 0 auto;
+    width: 50px;
+}
+
+@keyframes spin{
+    to{ transform: rotate(360deg); }
 }
 
 /* TABELA DE VISUALIZAÇÃO DOS CADASTROS */

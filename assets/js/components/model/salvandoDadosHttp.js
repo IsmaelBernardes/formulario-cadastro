@@ -4,7 +4,7 @@ export function salvarDadosHttp(cadastros){
     const listaDeCadastros = JSON.parse(localStorage.getItem("listaDeCadastros")) || [];
     let dadosIniciaisFormatados = [];
     
-    cadastros.forEach(dados => dadosIniciaisFormatados.push(formatarDadosIniciais(dados)));
+    cadastros.forEach(cadastro => dadosIniciaisFormatados.push(formatarDadosIniciais(cadastro)));
 
     if(listaDeCadastros.length === 0){
         

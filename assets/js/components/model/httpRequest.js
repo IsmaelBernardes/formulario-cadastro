@@ -3,7 +3,7 @@ export function dadosIniciais(callback){
 
     const xhr = new XMLHttpRequest();
 
-    xhr.open("GET", " https://private-21e8de-rafaellucio.apiary-mock.com/users");
+    xhr.open("GET", "https://private-21e8de-rafaellucio.apiary-mock.com/users");
 
     xhr.onreadystatechange = function (){
 

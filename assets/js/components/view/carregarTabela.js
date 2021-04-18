@@ -8,7 +8,6 @@ export function carregarTabela(){
     const buttonRetornar = window.document.querySelector("[data-button-retornar]");
     const paginaIndex = window.document.querySelector("[data-link-index]");
     const tbody = window.document.querySelector("[data-table-tbody]");
-    const thead = window.document.querySelector("[data-table-thead]");
 
     const listaDeCadastros = JSON.parse(localStorage.getItem("listaDeCadastros")) || [];
 

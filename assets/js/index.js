@@ -7,7 +7,9 @@ window.document.querySelector("[data-form-cadastro]").addEventListener("submit",
     event.preventDefault();
     
     const paginaTabela = window.document.querySelector("[data-link-visualizacao]");
-    
+    const conteudoBotaoSubmit = window.document.querySelector("[data-button-cadastrar-spinner]");
+    conteudoBotaoSubmit.className = "spinner";
+
     let cadastroValido = [];
     for(let dado in cadastro){
         
@@ -22,7 +24,7 @@ window.document.querySelector("[data-form-cadastro]").addEventListener("submit",
 
     if(cadastroValido.indexOf(false) === -1){
         
-        paginaTabela.click()
+        setTimeout(() => paginaTabela.click(), 1000);
         handlerCadastros(cadastro);
     }
 });
